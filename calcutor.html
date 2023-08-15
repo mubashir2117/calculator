@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input[type=text] {
+        background-color: rgb(242, 245, 242);
+        padding: 18px 20px;
+        font-size: 22px;
+        border: 2px solid #ccc;
+        border-radius: 10px;
+        caret-color: red;
+    }
+
+    input[type=button] {
+        padding: 25px;
+        color: white;
+        font-size: 25px;
+        box-shadow: 2px 2px 2px red;
+        border-radius: 20px;
+        margin: 5px;
+        border: none;
+        border: none;
+        background-color: rgb(32, 142, 210);
+    }
+
+    .cal {
+        background-color: rgb(10, 14, 14);
+        display: inline-block;
+        padding: 3px;
+        border-radius: 10px;
+    }
+
+    body {
+        padding: 10px;
+
+    }
+
+    h1 {
+        text-align: center;
+        margin-top: 0px;
+        font-style: italic;
+        color: green;
+        font-size: 39px;
+        text-decoration: underline;
+        text-decoration-color: black;
+    }
+
+    #m {
+        background-color: rgba(255, 0, 0, 0.637);
+    }
+</style>
+
+<body>
+    <center>
+        <h1>CALCULATOR</h1>
+
+        <input type="text" name="" id="num">
+        <br>
+        <br>
+        <div class="cal">
+            <table>
+                <tr>
+                    <td>
+                        <input type="button" value="7" onclick="btnnum('7')">
+                        <input type="button" value="8" onclick="btnnum('8')">
+                        <input type="button" value="9" onclick="btnnum('9')">
+                        <input type="button" value="+" onclick="btnnum('+')">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="4" onclick="btnnum('4')">
+                        <input type="button" value="5" onclick="btnnum('5')">
+                        <input type="button" value="6" onclick="btnnum('6')">
+                        <input type="button" value="-" onclick="btnnum('-')">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="1" onclick="btnnum('1')">
+                        <input type="button" value="2" onclick="btnnum('2')">
+                        <input type="button" value="3" onclick="btnnum('3')">
+                        <input type="button" value="*" onclick="btnnum('*')">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" id="m" value="C" onclick="CLR()">
+                        <input type="button" value="0" onclick="btnmum('0')">
+                        <input type="button" value="=" onclick="solve('=')">
+                        <input type="button" value="/" onclick="btnmum('/')">
+                    </td>
+                </tr>
+            </table>
+    </center>
+    </div>
+    <script>
+        function btnnum(params) {
+            document.getElementById("num").value += params;
+        }
+        function solve() {
+            var x = document.getElementById("num").value;
+            var y = eval(x)
+            document.getElementById("num").value = y;
+        }
+        function CLR() {
+            document.getElementById("num").value = " ";
+        }
+
+    </script>
+</body>
+
+</html>

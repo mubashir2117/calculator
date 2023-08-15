@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div>
+        <p></p>
+        <button>Get New Quote</button>
+    </div>
+    <script>
+        const button = document.querySelector("button")
+const p = document.querySelector("p")
+const API = "https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjh16fotav_AhUbimgJHewwCIcYABAAGgJ3Zg&ohost=www.google.com&cid=CAESa-D2Ngl1I7Ol__39ukLZei4sF-TumzljOQsC7PlJMiueptazv0I7ZFmP2HPGfIFYTRb4MEFC4do_Ue-artckorYKOdBzlbbj3-CFd3wAxoh6jHRBbp5Sp_Ti7p9Bwe8Qq4bnzNkP9Jg5VNst&sig=AOD64_24OfVeM5ILTnZN-n7ukkJSLJ6qsg&q&adurl&ved=2ahUKEwieoKLotav_AhV0UaQEHSH-BkMQ0Qx6BAgJEAE"
+
+button.addEventListener("click", () => {
+
+    fetch(API).then(res => res.json()).then(data => {
+        p.innerText = data.content;
+    }).catch(() => alert("Error Fetching quote!"));
+});
+    </script>
+</body>
+</html>

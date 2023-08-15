@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+    .for {
+        margin: 8%;
+        border: 2px solid black;
+        float: right;
+        border-radius: 5px;
+        padding: 25px;
+        background-color: #fff;
+        border: none;
+}
+
+    input {
+        padding: 10px 30px;
+        border-radius: 5px;
+        border: 1px solid black;
+    
+    }
+
+    button {
+        background-color:royalblue;
+        color: white;
+        border-radius: 5px;
+        padding: 10px 90px;
+        font-size: 20px;
+        border: none;
+
+    }
+
+    #mf {
+        background-color: green;
+       
+        border-radius: 5px;
+        padding: 10px 30px;
+        font-size: 20px;
+        border: none;
+    } 
+    #mf a{
+        text-decoration: none;
+        color: white;
+    }
+    body{
+        background-color: ;
+    }
+    
+</style>
+
+<body>
+    
+    <div class="for">
+ <form>
+        <input type="text" placeholder="Email or PhoneNumber" id="phones">
+         <br>
+         <br>
+        <input type="password" placeholder="Password" id="passw">
+         <br>
+         <br>
+         <button type="submit" onclick="myfunct()">Log in</button>
+         <br>
+         <br>
+         <hr>
+        <a href="p.html"><button id="mf" type="submit">Create New Account</a></button>
+      
+    </form>
+</div>
+
+
+
+<script>
+    function myfunct() {
+        var fname =document.getElementById("phones").value;
+        localStorage.setItem("Email", fname)
+        
+        var lname =document.getElementById("passw").value;
+        localStorage.setItem("Password", lname)
+    }
+</script>
+</body>
+
+</html>
